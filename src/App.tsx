@@ -347,7 +347,7 @@ export default function App() {
               </a>
               
               <a 
-                href="https://linkedin.com/in/johanjaners" 
+                href="https://linkedin.com/in/johan-janers/"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-6 rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all group"
