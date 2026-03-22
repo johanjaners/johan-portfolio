@@ -305,7 +305,8 @@ export default function App() {
               icon={Cloud} 
               items={[
                 "Git", "GitHub", "Azure DevOps", 
-                "CI/CD with GitHub Actions", "Docker", "Azure AI (OpenAI, Vision)"
+                "CI/CD with GitHub Actions", "Docker", "Azure AI (OpenAI, Vision)",
+                "AWS (Amplify, Elastic Beanstalk, CloudFront)"
               ]} 
             />
           </div>
@@ -318,7 +319,7 @@ export default function App() {
               name="Note2QuizAI"
               summary="AI powered quiz generator that creates questions from uploaded notes."
               whatIBuilt = "Deployed the application to AWS using Amplify, Elastic Beanstalk, and CloudFront. Designed and implemented a full-stack application with ASP.NET Core and React, integrating Azure AI Vision and Azure OpenAI for quiz generation. Built backend services for quiz creation, submission, and scoring using a structured API architecture."
-              tech={["ASP.NET Core", "React", "Azure AI", "OCR", "OpenAI"]}
+              tech={["ASP.NET Core", "React", "Azure AI", "AWS", "OCR", "OpenAI"]}
               github={LINKS.projects.note2QuizAiGithub}
               live={LINKS.projects.note2QuizAiLive}
             />
