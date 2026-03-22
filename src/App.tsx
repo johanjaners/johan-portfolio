@@ -2,8 +2,8 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-
-import { motion } from "motion/react";
+import { useState, ReactNode } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { 
   Github, 
   Linkedin, 
@@ -15,9 +15,10 @@ import {
   Layout, 
   Cloud, 
   ChevronRight,
-  MapPin
+  MapPin,
+  Menu, 
+  X
 } from "lucide-react";
-import { ReactNode } from "react";
 
 // --- Components ---
 
@@ -108,6 +109,18 @@ const TechGroup = ({ title, icon: Icon, items }: { title: string; icon: any; ite
 // --- Main App ---
 
 export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  const navLinks = [
+    { name: "About", href: "#about" },
+    { name: "Tech Stack", href: "#tech" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   return (
     <div className="min-h-screen selection:bg-accent/30 selection:text-foreground">
       {/* Navigation */}
@@ -116,18 +129,62 @@ export default function App() {
           <a href="#" className="text-sm font-bold tracking-tighter hover:opacity-80 transition-opacity">
             JJ<span className="text-accent">.</span>
           </a>
+
+          
+          {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="nav-link">About</a>
-            <a href="#tech" className="nav-link">Tech Stack</a>
-            <a href="#projects" className="nav-link">Projects</a>
-            <a href="#contact" className="nav-link">Contact</a>
+            {navLinks.map((link) => (
+              <a key={link.name} href={link.href} className="nav-link">{link.name}</a>
+            ))}
             <a href="#" className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-foreground text-background text-xs font-semibold hover:opacity-90 transition-opacity">
               <FileText size={14} />
               CV
             </a>
           </div>
-          {/* Mobile menu could be added here, but keeping it minimalist as requested */}
+
+          {/* Mobile Menu Toggle */}
+          <button 
+            onClick={toggleMenu}
+            className="md:hidden p-2 text-muted hover:text-foreground transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="md:hidden border-b border-border bg-background overflow-hidden"
+            >
+              <div className="flex flex-col p-6 gap-4">
+                {navLinks.map((link) => (
+                  <a 
+                    key={link.name} 
+                    href={link.href} 
+                    onClick={closeMenu}
+                    className="text-lg font-medium text-muted hover:text-accent transition-colors py-2"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+                <a 
+                  href="#" 
+                  onClick={closeMenu}
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-foreground text-background font-semibold mt-4"
+                >
+                  <FileText size={18} />
+                  Download CV
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       <main className="pt-16">
