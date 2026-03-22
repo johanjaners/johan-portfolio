@@ -327,7 +327,7 @@ export default function App() {
               name="PulseCare"
               summary="Team built healthcare platform with appointment booking and authentication."
               whatIBuilt="Contributed to a multi developer project, focusing on appointment related functionality, API design, CRUD operations, and JWT based authentication. Worked across backend and frontend integration in a structured team environment."
-              tech={["ASP.NET Core", "React", "SQL Server", "JWT"]}
+              tech={["ASP.NET Core", "React", "SQL Server", "Docker", "JWT"]}
               github={LINKS.projects.pulseCareGithub}
               live={LINKS.projects.pulseCareLive}
             />
