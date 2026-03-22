@@ -20,6 +20,22 @@ import {
   X
 } from "lucide-react";
 
+const LINKS = {
+  social: {
+    github: "https://github.com/johanjaners",
+    linkedin: "https://www.linkedin.com/in/johan-janers/",
+    email: "mailto:johanjaners@gmail.com",
+  },
+  projects: {
+    note2QuizAiGithub: "https://github.com/johanjaners/Note2QuizAI",
+    note2QuizAiLive: "https://main.d2tidw0fafhzdw.amplifyapp.com",
+    pulseCareGithub: "https://github.com/johanjaners/PulseCare-backend",
+    pulseCareLive: "https://pulsecare.online/",
+    kanbanBoardGithub: "https://github.com/johanjaners/kanban-board",
+    kanbanBoardLive: "https://brave-cliff-0698b8403.3.azurestaticapps.net/",
+  },
+} as const;
+
 // --- Components ---
 
 const Section = ({ id, title, children, className = "" }: { id: string; title?: string; children: ReactNode; className?: string }) => (
@@ -228,10 +244,10 @@ export default function App() {
             </div>
 
             <div className="flex items-center gap-6">
-              <a href="https://github.com/johanjaners" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
+              <a href={LINKS.social.github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
                 <Github size={24} />
               </a>
-              <a href="https://linkedin.com/in/johanjaners" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
+              <a href={LINKS.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
                 <Linkedin size={24} />
               </a>
             </div>
@@ -303,24 +319,24 @@ export default function App() {
               summary="AI powered quiz generator that creates questions from uploaded notes."
               whatIBuilt="Designed and implemented a fullstack application with ASP.NET Core and React, integrating Azure AI services for OCR and quiz generation. Built backend services for quiz creation, submission, and scoring using a structured API architecture."
               tech={["ASP.NET Core", "React", "Azure AI", "OCR", "OpenAI"]}
-              github="https://github.com/johanjaners/Note2QuizAI"
-              live="https://blue-smoke-07fa87403.1.azurestaticapps.net/"
+              github={LINKS.projects.note2QuizAiGithub}
+              live={LINKS.projects.note2QuizAiLive}
             />
             <ProjectCard 
               name="PulseCare"
               summary="Team built healthcare platform with appointment booking and authentication."
               whatIBuilt="Contributed to a multi developer project, focusing on appointment related functionality, API design, CRUD operations, and JWT based authentication. Worked across backend and frontend integration in a structured team environment."
               tech={["ASP.NET Core", "React", "SQL Server", "JWT"]}
-              github="https://github.com/johanjaners/PulseCare-backend"
-              live="https://pulsecare.online/"
+              github={LINKS.projects.pulseCareGithub}
+              live={LINKS.projects.pulseCareLive}
             />
             <ProjectCard 
               name="Kanban Board"
               summary="Fullstack task management application with board based workflow."
               whatIBuilt="Built a fullstack application using ASP.NET Core Web API and React, implementing task and board management with CRUD operations, authentication, and frontend state handling. Deployed with CI/CD to Azure."
               tech={["ASP.NET Core", "React", "PostgreSQL", "JWT", "Azure CI/CD"]}
-              github="https://github.com/johanjaners/kanban-board"
-              live="https://brave-cliff-0698b8403.3.azurestaticapps.net/"
+              github={LINKS.projects.kanbanBoardGithub}
+              live={LINKS.projects.kanbanBoardLive}
             />
           </div>
         </Section>
@@ -334,7 +350,7 @@ export default function App() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a 
-                href="mailto:johanjaners@gmail.com" 
+                href={LINKS.social.email} 
                 className="flex items-center gap-4 p-6 rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all group"
               >
                 <div className="p-3 rounded-xl bg-accent/10 text-accent group-hover:scale-110 transition-transform">
@@ -347,7 +363,7 @@ export default function App() {
               </a>
               
               <a 
-                href="https://linkedin.com/in/johan-janers/"
+                href={LINKS.social.linkedin}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-6 rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all group"
@@ -362,7 +378,7 @@ export default function App() {
               </a>
 
               <a 
-                href="https://github.com/johanjaners" 
+                href={LINKS.social.github} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-6 rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all group"
