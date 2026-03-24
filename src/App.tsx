@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 const LINKS = {
-  cv: "/Johan_Janers_CV_.NET_Developer.pdf",
+  cv: "/johan-janers-cv-dotnet-developer.pdf",
   social: {
     github: "https://github.com/johanjaners",
     linkedin: "https://www.linkedin.com/in/johan-janers/",
@@ -152,10 +152,10 @@ export default function App() {
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="nav-link">{link.name}</a>
             ))}
-            {/* <a href={LINKS.cv} download className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-foreground text-background text-xs font-semibold hover:opacity-90 transition-opacity">
+            <a href={LINKS.cv} download className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-foreground text-background text-xs font-semibold hover:opacity-90 transition-opacity">
               <FileText size={14} />
               CV
-            </a> */}
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -189,7 +189,7 @@ export default function App() {
                     {link.name}
                   </a>
                 ))}
-                {/* <a 
+                <a 
                   href={LINKS.cv} 
                   download
                   onClick={closeMenu}
@@ -197,7 +197,7 @@ export default function App() {
                 >
                   <FileText size={18} />
                   Download CV
-                </a> */}
+                </a>
               </div>
             </motion.div>
           )}
@@ -235,14 +235,14 @@ export default function App() {
                 View Projects
                 <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              {/* <a 
+              <a 
                 href={LINKS.cv} 
                 download
                 className="px-8 py-3 rounded-full border border-border hover:bg-white/5 transition-all font-semibold flex items-center gap-2"
               >
                 <FileText size={18} />
                 Download CV
-              </a> */}
+              </a>
             </div>
 
             <div className="flex items-center gap-6">
@@ -395,7 +395,7 @@ export default function App() {
                 </div>
               </a>
 
-              {/* <a 
+              <a 
                 href={LINKS.cv} 
                 download
                 className="flex items-center gap-4 p-6 rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all group"
@@ -407,7 +407,7 @@ export default function App() {
                   <div className="text-xs text-muted uppercase tracking-wider font-bold mb-1">Resume</div>
                   <div className="font-medium">Download CV</div>
                 </div>
-              </a> */}
+              </a>
             </div>
           </div>
         </Section>
