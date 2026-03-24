@@ -4,9 +4,8 @@
  */
 import { useState, ReactNode } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { 
-  Github, 
-  Linkedin, 
   Mail, 
   FileText, 
   ExternalLink, 
@@ -80,7 +79,7 @@ const ProjectCard = ({
       <h3 className="text-xl font-semibold text-foreground">{name}</h3>
       <div className="flex gap-3">
         <a href={github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
-          <Github size={20} />
+          <FaGithub size={20} />
         </a>
         <a href={live} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
           <ExternalLink size={20} />
@@ -248,10 +247,10 @@ export default function App() {
 
             <div className="flex items-center gap-6">
               <a href={LINKS.social.github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
-                <Github size={24} />
+                <FaGithub size={24} />
               </a>
               <a href={LINKS.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
-                <Linkedin size={24} />
+                <FaLinkedinIn size={24} />
               </a>
             </div>
           </motion.div>
@@ -373,7 +372,7 @@ export default function App() {
                 className="flex items-center gap-4 p-6 rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all group"
               >
                 <div className="p-3 rounded-xl bg-accent/10 text-accent group-hover:scale-110 transition-transform">
-                  <Linkedin size={24} />
+                  <FaLinkedinIn size={24} />
                 </div>
                 <div>
                   <div className="text-xs text-muted uppercase tracking-wider font-bold mb-1">LinkedIn</div>
@@ -388,7 +387,7 @@ export default function App() {
                 className="flex items-center gap-4 p-6 rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all group"
               >
                 <div className="p-3 rounded-xl bg-accent/10 text-accent group-hover:scale-110 transition-transform">
-                  <Github size={24} />
+                  <FaGithub size={24} />
                 </div>
                 <div>
                   <div className="text-xs text-muted uppercase tracking-wider font-bold mb-1">GitHub</div>
