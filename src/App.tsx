@@ -29,10 +29,13 @@ const LINKS = {
   projects: {
     note2QuizAiGithub: "https://github.com/johanjaners/Note2QuizAI",
     note2QuizAiLive: "https://main.d2tidw0fafhzdw.amplifyapp.com",
+    note2QuizAiImage: "/Note2QuizAI.jpg",
     pulseCareGithub: "https://github.com/johanjaners/PulseCare-backend",
     pulseCareLive: "https://pulsecare.online/",
+    pulseCareImage: "/pulsecare.png",
     kanbanBoardGithub: "https://github.com/johanjaners/kanban-board",
     kanbanBoardLive: "https://brave-cliff-0698b8403.3.azurestaticapps.net/",
+    kanbanBoardImage: "/kanban-board.png",
   },
 } as const;
 
@@ -56,6 +59,7 @@ const Section = ({ id, title, children, className = "" }: { id: string; title?: 
 
 const ProjectCard = ({ 
   name, 
+  image,
   summary, 
   whatIBuilt, 
   tech, 
@@ -63,6 +67,7 @@ const ProjectCard = ({
   live 
 }: { 
   name: string; 
+  image: string;
   summary: string; 
   whatIBuilt: string; 
   tech: string[]; 
@@ -73,30 +78,47 @@ const ProjectCard = ({
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    className="group p-8 rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300"
+    className="group overflow-hidden rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300"
   >
-    <div className="flex justify-between items-start mb-4">
-      <h3 className="text-xl font-semibold text-foreground">{name}</h3>
-      <div className="flex gap-3">
-        <a href={github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
-          <FaGithub size={20} />
-        </a>
-        <a href={live} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
-          <ExternalLink size={20} />
-        </a>
-      </div>
-    </div>
-    <p className="text-muted text-sm mb-6 leading-relaxed">{summary}</p>
-    
-    <div className="mb-6">
-      <h4 className="text-xs font-semibold uppercase tracking-wider text-muted mb-2">What I Built</h4>
-      <p className="text-sm text-foreground/80 leading-relaxed">{whatIBuilt}</p>
-    </div>
+    <a
+      href={live}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-thumb-wrap block"
+      aria-label={`Open live site for ${name}`}
+    >
+      <img
+        src={image}
+        alt={`${name} project preview`}
+        className="project-thumb"
+        loading="lazy"
+      />
+    </a>
 
-    <div className="flex flex-wrap gap-2">
-      {tech.map((t) => (
-        <span key={t} className="tech-tag">{t}</span>
-      ))}
+    <div className="p-6 md:p-7">
+      <div className="flex justify-between items-start mb-4">
+        <h3 className="text-xl font-semibold text-foreground">{name}</h3>
+        <div className="flex gap-3">
+          <a href={github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
+            <FaGithub size={20} />
+          </a>
+          <a href={live} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
+            <ExternalLink size={20} />
+          </a>
+        </div>
+      </div>
+      <p className="text-muted text-sm mb-6 leading-relaxed">{summary}</p>
+      
+      <div className="mb-6">
+        <h4 className="text-xs font-semibold uppercase tracking-wider text-muted mb-2">What I Built</h4>
+        <p className="text-sm text-foreground/80 leading-relaxed">{whatIBuilt}</p>
+      </div>
+
+      <div className="flex flex-wrap gap-2">
+        {tech.map((t) => (
+          <span key={t} className="tech-tag">{t}</span>
+        ))}
+      </div>
     </div>
   </motion.div>
 );
@@ -319,6 +341,7 @@ export default function App() {
           <div className="grid grid-cols-1 gap-8">
             <ProjectCard 
               name="Note2QuizAI"
+              image={LINKS.projects.note2QuizAiImage}
               summary="AI powered quiz generator that creates questions from uploaded notes."
               whatIBuilt = "Deployed the application to AWS using Amplify, Elastic Beanstalk, and CloudFront. Designed and implemented a full-stack application with ASP.NET Core and React, integrating Azure AI Vision and Azure OpenAI for quiz generation. Built backend services for quiz creation, submission, and scoring using a structured API architecture."
               tech={["ASP.NET Core", "React", "Azure AI", "AWS", "OCR", "OpenAI"]}
@@ -327,6 +350,7 @@ export default function App() {
             />
             <ProjectCard 
               name="PulseCare"
+              image={LINKS.projects.pulseCareImage}
               summary="Team built healthcare platform with appointment booking and authentication."
               whatIBuilt="Contributed to a multi developer project, focusing on appointment related functionality, API design, CRUD operations, and JWT based authentication. Worked across backend and frontend integration in a structured team environment."
               tech={["ASP.NET Core", "React", "SQL Server", "Docker", "JWT"]}
@@ -335,6 +359,7 @@ export default function App() {
             />
             <ProjectCard 
               name="Kanban Board"
+              image={LINKS.projects.kanbanBoardImage}
               summary="Fullstack task management application with board based workflow."
               whatIBuilt="Built a fullstack application using ASP.NET Core Web API and React, implementing task and board management with CRUD operations, authentication, and frontend state handling. Deployed with CI/CD to Azure."
               tech={["ASP.NET Core", "React", "PostgreSQL", "JWT", "Azure CI/CD"]}
