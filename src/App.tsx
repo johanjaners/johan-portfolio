@@ -27,6 +27,9 @@ const LINKS = {
     email: "mailto:johanjaners@gmail.com",
   },
   projects: {
+    recipeSearchApiGithub: "https://github.com/johanjaners/recipe-search-api",
+    recipeSearchApiLive: "https://recipe-search-api-a8cwexa9fag3fyg2.westeurope-01.azurewebsites.net/swagger",
+    recipeSearchApiImage: "/recipe-search-api.png",
     note2QuizAiGithub: "https://github.com/johanjaners/Note2QuizAI",
     note2QuizAiLive: "https://main.d2tidw0fafhzdw.amplifyapp.com",
     note2QuizAiImage: "/Note2QuizAI.jpg",
@@ -339,6 +342,15 @@ export default function App() {
         {/* Projects Section */}
         <Section id="projects" title="Projects">
           <div className="grid grid-cols-1 gap-8">
+            <ProjectCard 
+              name="Recipe Search API"
+              image={LINKS.projects.recipeSearchApiImage}
+              summary="AI-powered recipe search API with multilingual query understanding and deterministic ranking."
+              whatIBuilt="Designed and implemented a backend-focused ASP.NET Core Web API integrating Azure OpenAI for natural language interpretation. Built a fast in-memory search engine with deterministic scoring, embeddings, and multilingual support. Created clean architecture, domain-driven structure, and comprehensive documentation. Deployed the API on Azure App Service with Blob Storage for data hosting."
+              tech={["ASP.NET Core", "Azure OpenAI", "Embeddings", "C#", "In-memory search", "Clean Architecture", "Azure (App Service, Blob Storage)"]}
+              github={LINKS.projects.recipeSearchApiGithub}
+              live={LINKS.projects.recipeSearchApiLive}
+            />
             <ProjectCard 
               name="Note2QuizAI"
               image={LINKS.projects.note2QuizAiImage}
