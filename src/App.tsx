@@ -286,10 +286,10 @@ export default function App() {
                 I recently completed SALT’s .NET program and focus primarily on backend development with C# and ASP.NET Core.
               </p>
               <p>
-                I build structured APIs, work with relational data and SQL, and focus on creating maintainable systems with clear architecture. I also have experience building fullstack applications with React and TypeScript.
+                I build structured APIs, work with relational data and SQL, and design maintainable systems with clear architecture. I also have experience building fullstack applications with React and TypeScript.
               </p>
               <p>
-                My background in engineering gives me a practical, systems oriented approach to development.
+                My background in engineering gives me a practical, systems-oriented approach to development.
               </p>
             </div>
             <div className="hidden md:block">
@@ -297,7 +297,7 @@ export default function App() {
                <div className="h-full border-l border-border pl-12 flex flex-col justify-center">
                   <div className="text-xs uppercase tracking-widest text-accent font-bold mb-4">Philosophy</div>
                   <p className="text-xl font-medium text-foreground/80 italic">
-                    "Focus on creating maintainable systems with clear architecture."
+                    "Create maintainable systems with clear architecture."
                   </p>
                </div>
             </div>
