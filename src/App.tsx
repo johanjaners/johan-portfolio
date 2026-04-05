@@ -324,7 +324,7 @@ export default function App() {
               icon={Layout} 
               items={[
                 "React", "TypeScript", "JavaScript", 
-                "HTML", "CSS", "Tailwind"
+                "HTML", "CSS", "Tailwind", "Vite"
               ]} 
             />
             <TechGroup 
