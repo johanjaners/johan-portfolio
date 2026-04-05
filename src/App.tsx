@@ -313,7 +313,7 @@ export default function App() {
               items={[
                 "C#", ".NET", "ASP.NET Core", "Web API", 
                 "Entity Framework Core", "SQL Server", "PostgreSQL", 
-                "JWT Authentication", "REST API Design", "Kafka"
+                "JWT Authentication", "REST API Design", "Kafka", "Azure OpenAI"
               ]} 
             />
             <TechGroup 
