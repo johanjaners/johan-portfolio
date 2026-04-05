@@ -331,9 +331,10 @@ export default function App() {
               title="Tools / Cloud" 
               icon={Cloud} 
               items={[
-                "Git", "GitHub", "Azure DevOps", 
-                "CI/CD with GitHub Actions", "Docker", "Azure AI (OpenAI, Vision)",
-                "AWS (Amplify, Elastic Beanstalk, CloudFront)"
+                "Azure (App Service, Blob Storage, OpenAI, Vision)",
+                "AWS (Amplify, Elastic Beanstalk, CloudFront)",
+                "Git", "GitHub", "Azure DevOps",
+                "CI/CD with GitHub Actions", "Docker"
               ]} 
             />
           </div>
