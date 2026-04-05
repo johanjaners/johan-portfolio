@@ -355,8 +355,8 @@ export default function App() {
               name="Note2QuizAI"
               image={LINKS.projects.note2QuizAiImage}
               summary="AI powered quiz generator that creates questions from uploaded notes."
-              whatIBuilt = "Deployed the application to AWS using Amplify, Elastic Beanstalk, and CloudFront. Designed and implemented a full-stack application with ASP.NET Core and React, integrating Azure AI Vision and Azure OpenAI for quiz generation. Built backend services for quiz creation, submission, and scoring using a structured API architecture."
-              tech={["ASP.NET Core", "React", "Azure AI", "AWS", "OCR", "OpenAI"]}
+              whatIBuilt = "Designed and implemented a full-stack application with ASP.NET Core and React, integrating Azure AI Vision and Azure OpenAI for quiz generation. Built backend services for quiz creation, submission, and scoring using a structured API architecture. Deployed the application to AWS using Amplify, Elastic Beanstalk, and CloudFront."
+              tech={["ASP.NET Core", "React", "Azure (Vision OCR, OpenAI)", "AWS (Amplify, Elastic Beanstalk, Cloudfront)"]}
               github={LINKS.projects.note2QuizAiGithub}
               live={LINKS.projects.note2QuizAiLive}
             />
