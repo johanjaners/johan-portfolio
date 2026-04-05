@@ -369,15 +369,6 @@ export default function App() {
               github={LINKS.projects.pulseCareGithub}
               live={LINKS.projects.pulseCareLive}
             />
-            <ProjectCard 
-              name="Kanban Board"
-              image={LINKS.projects.kanbanBoardImage}
-              summary="Fullstack task management application with board based workflow."
-              whatIBuilt="Built a fullstack application using ASP.NET Core Web API and React, implementing task and board management with CRUD operations, authentication, and frontend state handling. Deployed with CI/CD to Azure."
-              tech={["ASP.NET Core", "React", "PostgreSQL", "JWT", "Azure CI/CD"]}
-              github={LINKS.projects.kanbanBoardGithub}
-              live={LINKS.projects.kanbanBoardLive}
-            />
           </div>
         </Section>
 
