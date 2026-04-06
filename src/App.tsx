@@ -244,7 +244,7 @@ export default function App() {
               Backend & .NET Developer with Applied AI Experience
             </h2>
             <p className="text-lg md:text-xl text-muted max-w-2xl mb-8 leading-relaxed">
-              I build structured backend systems and AI‑powered web applications using C#, ASP.NET Core, SQL, Azure OpenAI, and modern cloud services.
+              I build structured backend systems and AI-powered web applications using C#, ASP.NET Core, SQL, Azure OpenAI, and cloud services on Azure and AWS.
             </p>
             
             <div className="flex items-center gap-3 text-sm text-muted mb-12">
