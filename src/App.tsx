@@ -241,10 +241,10 @@ export default function App() {
               Johan Janérs
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-accent mb-8">
-              Fullstack Developer with .NET focus
+              Backend & .NET Developer with Applied AI Experience
             </h2>
             <p className="text-lg md:text-xl text-muted max-w-2xl mb-8 leading-relaxed">
-              I build structured backend systems and web applications using C#, ASP.NET Core, SQL, React, and TypeScript.
+              I build structured backend systems and AI‑powered web applications using C#, ASP.NET Core, SQL, Azure OpenAI, and modern cloud services.
             </p>
             
             <div className="flex items-center gap-3 text-sm text-muted mb-12">
