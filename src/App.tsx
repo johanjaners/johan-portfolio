@@ -314,10 +314,12 @@ export default function App() {
               title="Backend" 
               icon={Database} 
               items={[
-                "C#", ".NET", "ASP.NET Core", "Web API", 
-                "Entity Framework Core", "SQL Server", "PostgreSQL", 
-                "JWT Authentication", "REST API Design", "Kafka", "Azure OpenAI"
-              ]} 
+                "C#", ".NET", "ASP.NET Core", "Web API",
+                "Entity Framework Core", "SQL Server", "PostgreSQL",
+                "JWT Authentication", "REST API Design",
+                "Kafka", "Azure OpenAI", "Embeddings", "Vector Search",
+                "Clean Architecture", "Python"
+              ]}
             />
             <TechGroup 
               title="Frontend" 
