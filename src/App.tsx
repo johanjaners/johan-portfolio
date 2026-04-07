@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 const LINKS = {
-  cv: "/johan-janers-cv-dotnet-developer.pdf",
+  cv: "/johan-janers-cv.pdf",
   social: {
     github: "https://github.com/johanjaners",
     linkedin: "https://www.linkedin.com/in/johan-janers/",
