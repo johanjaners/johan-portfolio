@@ -289,7 +289,7 @@ export default function App() {
                 I recently completed SALT’s .NET program and focus primarily on backend development with C# and ASP.NET Core.
               </p>
               <p>
-                I build structured APIs, work with relational data and SQL, and design maintainable systems with clear architecture. I also have experience building fullstack applications with React and TypeScript when needed.
+                I build structured APIs, work with relational data and SQL, and design maintainable systems with clear architecture. I also build fullstack applications using React and TypeScript.
               </p>
               <p>
                 My background in engineering gives me a practical, systems-oriented approach to development.
