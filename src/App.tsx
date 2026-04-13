@@ -331,7 +331,7 @@ export default function App() {
                 "C#", ".NET", "ASP.NET Core", "Web API",
                 "Entity Framework Core", "SQL Server", "PostgreSQL",
                 "JWT Authentication", "REST API Design",
-                "Kafka", "Azure OpenAI", "Clean Architecture", "Python"
+                "Kafka", "Microservices", "Azure OpenAI", "Clean Architecture", "Python"
               ]}
             />
             <TechGroup 
