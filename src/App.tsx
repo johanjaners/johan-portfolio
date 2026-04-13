@@ -368,7 +368,7 @@ export default function App() {
               tech={["ASP.NET Core", "Kafka", "EF Core", "PostgreSQL", "Clean Architecture", "Microservices"]}
               github={LINKS.projects.paymentServiceGithub}
               thumbnailFit="contain"
-              thumbnailPaddingLeft="pl-4"
+              thumbnailPaddingLeft="pl-4.5"
             />
             <ProjectCard 
               name="Recipe Search API"
