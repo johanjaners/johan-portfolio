@@ -42,7 +42,7 @@
 }
 
 .project-thumb-wrap {
-    @apply overflow-hidden border-b border-border bg-black/30;
+    @apply overflow-hidden border-b border-border bg-white/5;
     aspect-ratio: 21 / 8;
 }
 
