@@ -67,7 +67,8 @@ const ProjectCard = ({
   tech, 
   github, 
   live,
-  thumbnailFit = "cover"
+  thumbnailFit = "cover",
+  thumbnailPaddingLeft = ""
 }: { 
   name: string; 
   image: string;
@@ -77,6 +78,7 @@ const ProjectCard = ({
   github: string; 
   live?: string;
   thumbnailFit?: "cover" | "contain";
+  thumbnailPaddingLeft?: string;
 }) => (
   <motion.div 
     initial={{ opacity: 0, y: 20 }}
@@ -89,7 +91,7 @@ const ProjectCard = ({
         href={live || github}
         target="_blank"
         rel="noopener noreferrer"
-        className="project-thumb-wrap block"
+        className={`project-thumb-wrap block ${thumbnailPaddingLeft}`}
         aria-label={`Open ${live ? "live site" : "repository"} for ${name}`}
       >
         <img
@@ -100,7 +102,7 @@ const ProjectCard = ({
         />
       </a>
     ) : (
-      <div className="project-thumb-wrap block">
+      <div className={`project-thumb-wrap block ${thumbnailPaddingLeft}`}>
         <img
           src={image}
           alt={`${name} project preview`}
@@ -366,6 +368,7 @@ export default function App() {
               tech={["ASP.NET Core", "Kafka", "EF Core", "PostgreSQL", "Clean Architecture", "Microservices"]}
               github={LINKS.projects.paymentServiceGithub}
               thumbnailFit="contain"
+              thumbnailPaddingLeft="pl-4"
             />
             <ProjectCard 
               name="Recipe Search API"
