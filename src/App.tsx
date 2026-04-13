@@ -66,7 +66,8 @@ const ProjectCard = ({
   whatIBuilt, 
   tech, 
   github, 
-  live 
+  live,
+  thumbnailFit = "cover"
 }: { 
   name: string; 
   image: string;
@@ -75,6 +76,7 @@ const ProjectCard = ({
   tech: string[]; 
   github: string; 
   live?: string;
+  thumbnailFit?: "cover" | "contain";
 }) => (
   <motion.div 
     initial={{ opacity: 0, y: 20 }}
@@ -93,7 +95,7 @@ const ProjectCard = ({
         <img
           src={image}
           alt={`${name} project preview`}
-          className="project-thumb"
+          className={`project-thumb ${thumbnailFit === "contain" ? "object-contain object-center" : "object-cover object-top"}`}
           loading="lazy"
         />
       </a>
@@ -102,7 +104,7 @@ const ProjectCard = ({
         <img
           src={image}
           alt={`${name} project preview`}
-          className="project-thumb"
+          className={`project-thumb ${thumbnailFit === "contain" ? "object-contain object-center" : "object-cover object-top"}`}
           loading="lazy"
         />
       </div>
@@ -363,6 +365,7 @@ export default function App() {
               whatIBuilt="Designed and implemented the service architecture and core payment and invoice lifecycle flow. Built asynchronous event consumption and publishing with Kafka, invoice persistence with PostgreSQL and EF Core, cross team event contract alignment, and integration testing with Swagger and Kafka."
               tech={["ASP.NET Core", "Kafka", "EF Core", "PostgreSQL", "Clean Architecture", "Microservices"]}
               github={LINKS.projects.paymentServiceGithub}
+              thumbnailFit="contain"
             />
             <ProjectCard 
               name="Recipe Search API"

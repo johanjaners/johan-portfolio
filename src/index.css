@@ -47,7 +47,7 @@
 }
 
 .project-thumb {
-    @apply h-full w-full object-cover object-top transition-transform duration-500;
+    @apply h-full w-full transition-transform duration-500;
 }
 
 .group:hover .project-thumb {
