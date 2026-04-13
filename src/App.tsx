@@ -27,6 +27,8 @@ const LINKS = {
     email: "mailto:johanjaners@gmail.com",
   },
   projects: {
+    paymentServiceGithub: "https://github.com/johanjaners/event-driven-payment-service",
+    paymentServiceImage: "/payment-service.png",
     recipeSearchApiGithub: "https://github.com/johanjaners/recipe-search-api",
     recipeSearchApiLive: "https://recipe-search-api-a8cwexa9fag3fyg2.westeurope-01.azurewebsites.net/swagger",
     recipeSearchApiImage: "/recipe-search-api.png",
@@ -341,6 +343,14 @@ export default function App() {
         {/* Projects Section */}
         <Section id="projects" title="Projects">
           <div className="grid grid-cols-1 gap-8">
+            <ProjectCard
+              name="Event Driven Payment Service"
+              image={LINKS.projects.paymentServiceImage}
+              summary="Event driven payment and invoice microservice built with .NET, Kafka, EF Core, and PostgreSQL."
+              whatIBuilt="Designed and implemented the service architecture and core payment and invoice lifecycle flow. Built asynchronous event consumption and publishing with Kafka, invoice persistence with PostgreSQL and EF Core, cross team event contract alignment, and integration testing with Swagger and Kafka."
+              tech={["ASP.NET Core", "Kafka", "EF Core", "PostgreSQL", "Clean Architecture", "Microservices"]}
+              github={LINKS.projects.paymentServiceGithub}
+            />
             <ProjectCard 
               name="Recipe Search API"
               image={LINKS.projects.recipeSearchApiImage}
