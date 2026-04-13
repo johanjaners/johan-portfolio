@@ -84,13 +84,13 @@ const ProjectCard = ({
     viewport={{ once: true }}
     className="group overflow-hidden rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300"
   >
-    {live ? (
+    {(live || github) ? (
       <a
-        href={live}
+        href={live || github}
         target="_blank"
         rel="noopener noreferrer"
         className="project-thumb-wrap block"
-        aria-label={`Open live site for ${name}`}
+        aria-label={`Open ${live ? "live site" : "repository"} for ${name}`}
       >
         <img
           src={image}
