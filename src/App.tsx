@@ -28,7 +28,7 @@ const LINKS = {
   },
   projects: {
     paymentServiceGithub: "https://github.com/johanjaners/event-driven-payment-service",
-    paymentServiceImage: "/paymentservice.png",
+    paymentServiceImage: "/payment-service.png",
     recipeSearchApiGithub: "https://github.com/johanjaners/recipe-search-api",
     recipeSearchApiLive: "https://recipe-search-api-a8cwexa9fag3fyg2.westeurope-01.azurewebsites.net/swagger",
     recipeSearchApiImage: "/recipe-search-api.png",
