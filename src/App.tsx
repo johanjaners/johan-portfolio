@@ -36,9 +36,6 @@ const LINKS = {
     pulseCareGithub: "https://github.com/johanjaners/PulseCare-backend",
     pulseCareLive: "https://pulsecare.online/",
     pulseCareImage: "/pulsecare.png",
-    kanbanBoardGithub: "https://github.com/johanjaners/kanban-board",
-    kanbanBoardLive: "https://brave-cliff-0698b8403.3.azurestaticapps.net/",
-    kanbanBoardImage: "/kanban-board.png",
   },
 } as const;
 
