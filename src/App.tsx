@@ -28,7 +28,7 @@ const LINKS = {
   },
   projects: {
     paymentServiceGithub: "https://github.com/johanjaners/event-driven-payment-service",
-    paymentServiceImage: "/payment-service.png",
+    paymentServiceImage: "/paymentservice.png",
     recipeSearchApiGithub: "https://github.com/johanjaners/recipe-search-api",
     recipeSearchApiLive: "https://recipe-search-api-a8cwexa9fag3fyg2.westeurope-01.azurewebsites.net/swagger",
     recipeSearchApiImage: "/recipe-search-api.png",
@@ -74,7 +74,7 @@ const ProjectCard = ({
   whatIBuilt: string; 
   tech: string[]; 
   github: string; 
-  live: string;
+  live?: string;
 }) => (
   <motion.div 
     initial={{ opacity: 0, y: 20 }}
@@ -82,20 +82,31 @@ const ProjectCard = ({
     viewport={{ once: true }}
     className="group overflow-hidden rounded-2xl border border-border bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300"
   >
-    <a
-      href={live}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="project-thumb-wrap block"
-      aria-label={`Open live site for ${name}`}
-    >
-      <img
-        src={image}
-        alt={`${name} project preview`}
-        className="project-thumb"
-        loading="lazy"
-      />
-    </a>
+    {live ? (
+      <a
+        href={live}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-thumb-wrap block"
+        aria-label={`Open live site for ${name}`}
+      >
+        <img
+          src={image}
+          alt={`${name} project preview`}
+          className="project-thumb"
+          loading="lazy"
+        />
+      </a>
+    ) : (
+      <div className="project-thumb-wrap block">
+        <img
+          src={image}
+          alt={`${name} project preview`}
+          className="project-thumb"
+          loading="lazy"
+        />
+      </div>
+    )}
 
     <div className="p-6 md:p-7">
       <div className="flex justify-between items-start mb-4">
@@ -104,9 +115,11 @@ const ProjectCard = ({
           <a href={github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
             <FaGithub size={20} />
           </a>
-          <a href={live} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
-            <ExternalLink size={20} />
-          </a>
+          {live && (
+            <a href={live} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
+              <ExternalLink size={20} />
+            </a>
+          )}
         </div>
       </div>
       <p className="text-muted text-sm mb-6 leading-relaxed">{summary}</p>
