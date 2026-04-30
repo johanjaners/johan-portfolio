@@ -371,15 +371,6 @@ export default function App() {
               thumbnailPaddingLeft="pl-4.5"
             />
             <ProjectCard 
-              name="Recipe Search API"
-              image={LINKS.projects.recipeSearchApiImage}
-              summary="AI-powered recipe search API with multilingual query understanding and deterministic ranking."
-              whatIBuilt="Designed and implemented a backend-focused ASP.NET Core Web API integrating Azure OpenAI for natural language interpretation. Built a fast in-memory search engine with deterministic scoring and multilingual support. Created clean architecture, domain-driven structure, and comprehensive documentation. Deployed the API on Azure App Service with Blob Storage for data hosting."
-              tech={["ASP.NET Core", "Azure OpenAI", "C#", "In-memory search", "Clean Architecture", "Azure (App Service, Blob Storage)"]}
-              github={LINKS.projects.recipeSearchApiGithub}
-              live={LINKS.projects.recipeSearchApiLive}
-            />
-            <ProjectCard 
               name="Note2QuizAI"
               image={LINKS.projects.note2QuizAiImage}
               summary="AI powered quiz generator that creates questions from uploaded notes."
@@ -387,6 +378,15 @@ export default function App() {
               tech={["ASP.NET Core", "React", "Azure (Vision OCR, OpenAI)", "AWS (Amplify, Elastic Beanstalk, Cloudfront)"]}
               github={LINKS.projects.note2QuizAiGithub}
               live={LINKS.projects.note2QuizAiLive}
+            />
+            <ProjectCard 
+              name="Recipe Search API"
+              image={LINKS.projects.recipeSearchApiImage}
+              summary="AI-powered recipe search API with multilingual query understanding and deterministic ranking."
+              whatIBuilt="Designed and implemented a backend-focused ASP.NET Core Web API integrating Azure OpenAI for natural language interpretation. Built a fast in-memory search engine with deterministic scoring and multilingual support. Created clean architecture, domain-driven structure, and comprehensive documentation. Deployed the API on Azure App Service with Blob Storage for data hosting."
+              tech={["ASP.NET Core", "Azure OpenAI", "C#", "In-memory search", "Clean Architecture", "Azure (App Service, Blob Storage)"]}
+              github={LINKS.projects.recipeSearchApiGithub}
+              live={LINKS.projects.recipeSearchApiLive}
             />
             <ProjectCard 
               name="PulseCare"
