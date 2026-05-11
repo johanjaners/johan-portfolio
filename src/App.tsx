@@ -364,7 +364,7 @@ export default function App() {
               name="Event Driven Payment Service"
               image={LINKS.projects.paymentServiceImage}
               summary="Event driven payment and invoice microservice built with .NET, Kafka, EF Core, and PostgreSQL."
-              whatIBuilt="Designed and implemented the service architecture and core payment and invoice lifecycle flow. Built asynchronous event consumption and publishing with Kafka, invoice persistence with PostgreSQL and EF Core, cross team event contract alignment, and integration testing with Swagger and Kafka."
+              whatIBuilt="Contributed to the design and implementation of an event-driven payment service architecture built with .NET, Kafka, EF Core, and PostgreSQL. Implemented core payment and invoice lifecycle flows, asynchronous event publishing and consumption with Kafka, invoice persistence, cross-team event contract alignment, and integration testing with Swagger and Kafka."
               tech={["ASP.NET Core", "Kafka", "EF Core", "PostgreSQL", "Clean Architecture", "Microservices"]}
               github={LINKS.projects.paymentServiceGithub}
               thumbnailFit="contain"
