@@ -257,15 +257,15 @@ export default function App() {
               Johan Janérs
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-accent mb-8">
-              Backend & Fullstack Developer with Applied AI Experience
+              Backend & Fullstack Developer | .NET / C# | Azure
             </h2>
             <p className="text-lg md:text-xl text-muted max-w-2xl mb-8 leading-relaxed">
-              I build structured backend systems and AI-powered web applications using C#, ASP.NET Core, SQL, Azure OpenAI, and cloud services on Azure and AWS.
+              I build reliable backend systems, APIs, and maintainable cloud based web applications using modern .NET technologies, with current experience in Angular, Azure, Docker, and Bicep.
             </p>
             
             <div className="flex items-center gap-3 text-sm text-muted mb-12">
               <MapPin size={16} className="text-accent" />
-              <span>Based in Stockholm. Open to opportunities in Stockholm and Gothenburg.</span>
+              <span>Based in Stockholm. Currently working as Backend Developer at Sandvik.</span>
             </div>
 
             <div className="flex flex-wrap gap-4 mb-12">
@@ -302,13 +302,13 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 text-muted leading-relaxed">
               <p>
-                I recently completed SALT’s .NET program and focus primarily on backend development with C# and ASP.NET Core.
+                Backend and fullstack developer focused on building reliable backend systems, APIs, and maintainable cloud based web applications using modern .NET technologies.
               </p>
               <p>
-                I build structured APIs, work with relational data and SQL, and design maintainable systems with clear architecture. I also build fullstack applications using React and TypeScript.
+                Currently working on Toolhive, a cloud based platform at Sandvik, in a .NET, Angular, Azure, Docker, and Bicep environment.
               </p>
               <p>
-                My background in engineering gives me a practical, systems-oriented approach to development.
+                I have 6+ years of broader engineering experience from cross functional technical environments, now focused on backend development, cloud platforms, and applied AI web applications.
               </p>
             </div>
             <div className="hidden md:block">
@@ -316,7 +316,7 @@ export default function App() {
                <div className="h-full border-l border-border pl-12 flex flex-col justify-center">
                   <div className="text-xs uppercase tracking-widest text-accent font-bold mb-4">Philosophy</div>
                   <p className="text-xl font-medium text-foreground/80 italic">
-                    "Create maintainable systems with clear architecture."
+                    "Build reliable systems that stay maintainable as they grow."
                   </p>
                </div>
             </div>
@@ -340,7 +340,7 @@ export default function App() {
               title="Frontend" 
               icon={Layout} 
               items={[
-                "React", "TypeScript", "JavaScript", 
+                "Angular", "React", "TypeScript", "JavaScript", 
                 "HTML", "CSS", "Tailwind", "Vite"
               ]} 
             />
@@ -374,10 +374,9 @@ export default function App() {
               name="Note2QuizAI"
               image={LINKS.projects.note2QuizAiImage}
               summary="AI powered quiz generator that creates questions from uploaded notes."
-              whatIBuilt = "Contributed to the design and implementation of a full-stack application with ASP.NET Core and React, integrating Azure AI Vision and Azure OpenAI for quiz generation. Built backend services for quiz creation, submission, and scoring using a structured API architecture. Deployed the application to AWS using Amplify, Elastic Beanstalk, and CloudFront."
-              tech={["ASP.NET Core", "React", "Azure (Vision OCR, OpenAI)", "AWS (Amplify, Elastic Beanstalk, Cloudfront)"]}
+              whatIBuilt = "Contributed to the design and implementation of a full-stack application with ASP.NET Core and React, integrating Azure AI Vision and Azure OpenAI for quiz generation. Built backend services for quiz creation, submission, and scoring using a structured API architecture. Configured AWS deployment using Amplify, Elastic Beanstalk, and CloudFront."
+              tech={["ASP.NET Core", "React", "Azure (Vision OCR, OpenAI)", "AWS (Amplify, Elastic Beanstalk, CloudFront)"]}
               github={LINKS.projects.note2QuizAiGithub}
-              live={LINKS.projects.note2QuizAiLive}
             />
             <ProjectCard 
               name="PulseCare"
@@ -404,7 +403,7 @@ export default function App() {
         <Section id="contact" title="Contact">
           <div className="max-w-2xl">
             <p className="text-xl text-muted mb-12 leading-relaxed">
-              Open to .NET, backend, and fullstack opportunities. Feel free to reach out.
+              Reach out for relevant .NET, backend, or fullstack opportunities.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
