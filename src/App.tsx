@@ -33,7 +33,6 @@ const LINKS = {
     recipeSearchApiLive: "https://recipe-search-api-a8cwexa9fag3fyg2.westeurope-01.azurewebsites.net/swagger",
     recipeSearchApiImage: "/recipe-search-api.png",
     note2QuizAiGithub: "https://github.com/johanjaners/Note2QuizAI",
-    note2QuizAiLive: "https://main.d2tidw0fafhzdw.amplifyapp.com",
     note2QuizAiImage: "/Note2QuizAI.jpg",
     pulseCareGithub: "https://github.com/johanjaners/PulseCare-backend",
     pulseCareLive: "https://pulsecare.online/",
@@ -484,3 +483,4 @@ export default function App() {
     </div>
   );
 }
+
