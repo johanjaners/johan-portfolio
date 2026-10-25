@@ -42,7 +42,9 @@ def section(title):
     return p(title.upper(), "Section")
 
 
-def item(title, meta, body):
+def item(title, meta, body, url=None):
+    if url:
+        title = f"<a href='{url}' color='#1F2937'>{title}</a>"
     return KeepTogether([p(title, "ItemTitle"), p(meta, "Meta"), p(body, "Body")])
 
 
@@ -80,7 +82,7 @@ def draw_sidebar(canvas, doc):
 
     groups = [
         ("General", [".NET / C#", "Python", "JavaScript", "TypeScript"]),
-        ("Backend", ["ASP.NET Core", "REST APIs", "Entity Framework", "SQL Server, PostgreSQL", "Kafka", "Clean Architecture", "Microservices", "JWT Authentication"]),
+        ("Backend", ["ASP.NET Core", "REST APIs", "Entity Framework Core", "SQL Server, PostgreSQL", "Kafka", "Clean Architecture", "Microservices", "JWT Authentication"]),
         ("Frontend", ["Angular", "React", "TanStack Query", "HTML, CSS, Tailwind"]),
         ("Cloud & DevOps", ["Azure", "Azure App Service", "Azure OpenAI", "Azure AI Vision", "Docker", "Bicep", "GitHub Actions", "AWS"]),
         ("Tools", ["Git + GitHub", "Azure DevOps", "VS Code", "xUnit", "TDD", "Agile"]),
@@ -112,22 +114,21 @@ def main():
 
     story = [
         p("Johan Janérs", "Name"),
-        p("Backend & Fullstack Developer | .NET / C# | Azure", "Role"),
+        p("Backend Developer | .NET / C# | Azure | Applied AI", "Role"),
         p("Stockholm, Sweden | <a href='mailto:johanjaners@gmail.com' color='#6B7280'>johanjaners@gmail.com</a> | +46 761 089 671", "Contact"),
-        p("Backend and fullstack developer focused on building reliable backend systems, APIs, and maintainable cloud based web applications using modern .NET technologies. Currently working on Toolhive, a cloud based platform at Sandvik, in a .NET, Angular, Azure, Docker, and Bicep environment.", "Summary"),
-        p("I have 6+ years of broader engineering experience from cross functional technical environments, now focused on backend development, cloud platforms, and applied AI web applications.", "Summary"),
+        p("Backend developer with current production .NET experience at Sandvik and hands-on project experience integrating Azure OpenAI and Azure AI Vision. Focused on building reliable backend systems, APIs, and maintainable cloud applications using modern .NET technologies.", "Summary"),
+        p("I have 6+ years of broader engineering experience from cross-functional technical environments, now focused on backend development, cloud platforms, and applied AI applications.", "Summary"),
         section("Work experience"),
-        item("Backend Developer", "Sandvik | Jul 2026 - Present", "Working on Toolhive, a cloud based platform built with .NET, Angular, Azure, Docker, and Bicep."),
-        item("Consultant", "Infuse Talent | Jul 2026 - Present", "Assigned to Sandvik as Backend Developer."),
+        item("Backend Developer", "Sandvik (consultant via Infuse Talent) | Jul 2026 - Present", "Developing backend functionality for Toolhive, a cloud based production platform in a .NET, Angular, Azure, Docker, and Bicep environment."),
         item("Consultant .NET Developer", "School of Applied Technology (SALT) | Feb 2026 - Apr 2026", "Delivered backend and AI focused development sprints through SALT's Graduate Program, including microservices architecture, event driven services with Kafka, and AI integrated web applications."),
         item("Performance Data Engineer", "Polestar | 2025", "Developed Python tools for log data processing, KPI reporting, and structured data exports. Built modular processing flows with loaders, extractors, and exporters."),
         item("Test Engineer", "Polestar | 2022 - 2025", "Worked in cross functional technical environments involving software, hardware, validation, data analysis, planning, and documented test execution."),
         item("Design Engineer", "Polestar | 2019 - 2022", "Contributed to technical requirements, system integration, and prototype development in complex engineering projects."),
         section("Projects"),
-        item("Event Driven Payment Service", ".NET, Kafka, EF Core, PostgreSQL", "Event driven payment and invoice service. Implemented payment lifecycle flows, asynchronous event handling, persistence, event contract alignment, and integration testing."),
-        item("Recipe Search API", "ASP.NET Core, Azure OpenAI, Azure App Service", "Backend focused Web API with multilingual query understanding, deterministic ranking, in memory search, clean architecture, and Azure deployment."),
-        item("Note2QuizAI", "ASP.NET Core, React, Azure AI Vision, Azure OpenAI, AWS", "AI powered quiz generator for uploaded notes. Built quiz generation, submission, and scoring flows, with AWS deployment configuration."),
-        item("PulseCare", "ASP.NET Core, React, SQL Server, Docker, JWT", "Team built healthcare platform. Owned appointment related APIs, CRUD operations, JWT based authentication, and frontend integration."),
+        item("Note2QuizAI", "ASP.NET Core, React, Azure AI Vision, Azure OpenAI, AWS", "AI powered quiz generator for uploaded notes. Built backend flows for quiz generation, submission, and scoring. Integrated Azure AI Vision and Azure OpenAI, with AWS deployment configuration.", "https://github.com/johanjaners/Note2QuizAI"),
+        item("Recipe Search API", "ASP.NET Core, Azure OpenAI, PostgreSQL, EF Core, Azure App Service", "Backend API with multilingual query interpretation using Azure OpenAI, PostgreSQL persistence through EF Core, and deterministic recipe ranking. Deployed to Azure App Service.", "https://github.com/johanjaners/recipe-search-api"),
+        item("Event Driven Payment Service", ".NET, Kafka, EF Core, PostgreSQL", "Event driven payment and invoice service. Implemented payment lifecycle flows, asynchronous event handling, persistence, event contract alignment, and integration testing.", "https://github.com/johanjaners/event-driven-payment-service"),
+        item("PulseCare", "ASP.NET Core, React, SQL Server, Docker, JWT", "Team built healthcare platform. Owned appointment related APIs, CRUD operations, JWT based authentication, and frontend integration.", "https://github.com/johanjaners/PulseCare-backend"),
         section("Education and training"),
         item("Full-Stack .NET / C#", "School of Applied Technology (SALT) | Oct 2025 - Jan 2026", "Intensive program in fullstack development with C#, .NET, React, TypeScript, TDD, mob programming, and applied learning."),
         item("M.Sc. Mechanical Engineering", "Luleå University of Technology | 2014 - 2019", "Master's degree focused on technical problem solving, simulation, and systems development."),

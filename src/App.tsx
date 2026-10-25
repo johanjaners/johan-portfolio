@@ -256,7 +256,7 @@ export default function App() {
               Johan Janérs
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-accent mb-8">
-              Backend & Fullstack Developer | .NET / C# | Azure
+              Backend Developer | .NET / C# | Azure | Applied AI
             </h2>
             <p className="text-lg md:text-xl text-muted max-w-2xl mb-8 leading-relaxed">
               I build reliable backend systems, APIs, and maintainable cloud based web applications using modern .NET technologies, with current experience in Angular, Azure, Docker, and Bicep.
@@ -301,13 +301,13 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 text-muted leading-relaxed">
               <p>
-                Backend and fullstack developer focused on building reliable backend systems, APIs, and maintainable cloud based web applications using modern .NET technologies.
+                Backend developer focused on building reliable backend systems, APIs, and maintainable cloud applications using modern .NET technologies.
               </p>
               <p>
-                Currently working on Toolhive, a cloud based platform at Sandvik, in a .NET, Angular, Azure, Docker, and Bicep environment.
+                Currently developing backend functionality for Toolhive, a cloud based production platform at Sandvik, as a consultant through Infuse Talent. Working in a .NET, Angular, Azure, Docker, and Bicep environment.
               </p>
               <p>
-                I have 6+ years of broader engineering experience from cross functional technical environments, now focused on backend development, cloud platforms, and applied AI web applications.
+                I have 6+ years of broader engineering experience from cross-functional technical environments, now focused on backend development, cloud platforms, and applied AI applications.
               </p>
             </div>
             <div className="hidden md:block">
@@ -350,7 +350,7 @@ export default function App() {
                 "Azure (App Service, Blob Storage, OpenAI, Vision)",
                 "AWS (Amplify, Elastic Beanstalk, CloudFront)",
                 "Git", "GitHub", "Azure DevOps",
-                "CI/CD with GitHub Actions", "Docker"
+                "CI/CD with GitHub Actions", "Docker", "Bicep"
               ]} 
             />
           </div>
@@ -359,6 +359,23 @@ export default function App() {
         {/* Projects Section */}
         <Section id="projects" title="Projects">
           <div className="grid grid-cols-1 gap-8">
+            <ProjectCard
+              name="Note2QuizAI"
+              image={LINKS.projects.note2QuizAiImage}
+              summary="AI powered quiz generator that creates questions from uploaded notes."
+              whatIBuilt = "Contributed to the design and implementation of a full-stack application with ASP.NET Core and React, integrating Azure AI Vision and Azure OpenAI for quiz generation. Built backend services for quiz creation, submission, and scoring using a structured API architecture. Configured AWS deployment using Amplify, Elastic Beanstalk, and CloudFront."
+              tech={["ASP.NET Core", "React", "Azure (Vision OCR, OpenAI)", "AWS (Amplify, Elastic Beanstalk, CloudFront)"]}
+              github={LINKS.projects.note2QuizAiGithub}
+            />
+            <ProjectCard
+              name="Recipe Search API"
+              image={LINKS.projects.recipeSearchApiImage}
+              summary="AI-powered recipe search API with multilingual query understanding and deterministic ranking."
+              whatIBuilt="Designed and implemented an ASP.NET Core Web API using Azure OpenAI to interpret multilingual queries into structured search input. Added PostgreSQL persistence through EF Core while keeping recipe retrieval and ranking deterministic. Separated application and domain logic from persistence and AI integration. Deployed the API on Azure App Service."
+              tech={["ASP.NET Core", "Azure OpenAI", "PostgreSQL", "EF Core", "Clean Architecture", "Azure App Service"]}
+              github={LINKS.projects.recipeSearchApiGithub}
+              live={LINKS.projects.recipeSearchApiLive}
+            />
             <ProjectCard
               name="Event Driven Payment Service"
               image={LINKS.projects.paymentServiceImage}
@@ -369,15 +386,7 @@ export default function App() {
               thumbnailFit="contain"
               thumbnailPaddingLeft="pl-4.5"
             />
-            <ProjectCard 
-              name="Note2QuizAI"
-              image={LINKS.projects.note2QuizAiImage}
-              summary="AI powered quiz generator that creates questions from uploaded notes."
-              whatIBuilt = "Contributed to the design and implementation of a full-stack application with ASP.NET Core and React, integrating Azure AI Vision and Azure OpenAI for quiz generation. Built backend services for quiz creation, submission, and scoring using a structured API architecture. Configured AWS deployment using Amplify, Elastic Beanstalk, and CloudFront."
-              tech={["ASP.NET Core", "React", "Azure (Vision OCR, OpenAI)", "AWS (Amplify, Elastic Beanstalk, CloudFront)"]}
-              github={LINKS.projects.note2QuizAiGithub}
-            />
-            <ProjectCard 
+            <ProjectCard
               name="PulseCare"
               image={LINKS.projects.pulseCareImage}
               summary="Team built healthcare platform with appointment booking and authentication."
@@ -385,15 +394,6 @@ export default function App() {
               tech={["ASP.NET Core", "React", "SQL Server", "Docker", "JWT"]}
               github={LINKS.projects.pulseCareGithub}
               live={LINKS.projects.pulseCareLive}
-            />
-            <ProjectCard 
-              name="Recipe Search API"
-              image={LINKS.projects.recipeSearchApiImage}
-              summary="AI-powered recipe search API with multilingual query understanding and deterministic ranking."
-              whatIBuilt="Designed and implemented a backend-focused ASP.NET Core Web API integrating Azure OpenAI for natural language interpretation. Built a fast in-memory search engine with deterministic scoring and multilingual support. Created clean architecture, domain-driven structure, and comprehensive documentation. Deployed the API on Azure App Service with Blob Storage for data hosting."
-              tech={["ASP.NET Core", "Azure OpenAI", "C#", "In-memory search", "Clean Architecture", "Azure (App Service, Blob Storage)"]}
-              github={LINKS.projects.recipeSearchApiGithub}
-              live={LINKS.projects.recipeSearchApiLive}
             />
           </div>
         </Section>
