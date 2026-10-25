@@ -301,13 +301,13 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 text-muted leading-relaxed">
               <p>
-                Backend developer focused on building reliable backend systems, APIs, and maintainable web applications using modern .NET technologies.
+                Backend developer with current production .NET experience at Sandvik and hands-on project experience integrating Azure OpenAI and Azure AI Vision. Focused on building reliable backend systems, APIs, and maintainable cloud applications using modern .NET technologies.
               </p>
               <p>
                 Currently developing backend functionality for Toolhive, a cloud based production platform at Sandvik, as a consultant through Infuse Talent. Working in a .NET, Angular, Azure, Docker, and Bicep environment.
               </p>
               <p>
-                I have 6+ years of broader engineering experience from cross functional technical environments, alongside hands-on project experience integrating Azure OpenAI and Azure AI Vision.
+                I have 6+ years of broader engineering experience from cross-functional technical environments, now focused on backend development, cloud platforms, and applied AI applications.
               </p>
             </div>
             <div className="hidden md:block">
