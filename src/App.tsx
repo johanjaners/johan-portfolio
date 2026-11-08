@@ -32,7 +32,8 @@ const LINKS = {
     recipeSearchApiGithub: "https://github.com/johanjaners/recipe-search-api",
     recipeSearchApiLive: "https://recipe-search-api-a8cwexa9fag3fyg2.westeurope-01.azurewebsites.net/swagger",
     recipeSearchApiImage: "/recipe-search-api.png",
-    note2QuizAiGithub: "https://github.com/johanjaners/Note2QuizAI",
+    note2QuizAiGithub: "https://github.com/johanjaners/note2quiz-ai",
+    note2QuizAiLive: "https://white-flower-05e98d103.5.azurestaticapps.net",
     note2QuizAiImage: "/Note2QuizAI.jpg",
     pulseCareGithub: "https://github.com/johanjaners/PulseCare-backend",
     pulseCareLive: "https://pulsecare.online/",
@@ -347,10 +348,11 @@ export default function App() {
               title="Tools / Cloud" 
               icon={Cloud} 
               items={[
-                "Azure (App Service, Blob Storage, OpenAI, Vision)",
+                "Azure (App Service, Container Apps, Static Web Apps)",
+                "Azure AI (OpenAI, Vision)",
                 "AWS (Amplify, Elastic Beanstalk, CloudFront)",
                 "Git", "GitHub", "Azure DevOps",
-                "CI/CD with GitHub Actions", "Docker", "Bicep"
+                "CI/CD with GitHub Actions", "Docker", "Bicep (IaC)"
               ]} 
             />
           </div>
@@ -362,10 +364,14 @@ export default function App() {
             <ProjectCard
               name="Note2QuizAI"
               image={LINKS.projects.note2QuizAiImage}
-              summary="AI powered quiz generator that creates questions from uploaded notes."
-              whatIBuilt = "Contributed to the design and implementation of a full-stack application with ASP.NET Core and React, integrating Azure AI Vision and Azure OpenAI for quiz generation. Built backend services for quiz creation, submission, and scoring using a structured API architecture. Configured AWS deployment using Amplify, Elastic Beanstalk, and CloudFront."
-              tech={["ASP.NET Core", "React", "Azure (Vision OCR, OpenAI)", "AWS (Amplify, Elastic Beanstalk, CloudFront)"]}
+              summary="AI-powered quiz generator that turns uploaded study notes into quizzes using Azure AI Vision and Azure OpenAI."
+              whatIBuilt="Contributed to the original full-stack application and later migrated its deployment to Azure. Containerized the ASP.NET Core API, defined infrastructure with Bicep, deployed the API to Azure Container Apps and the React frontend to Azure Static Web Apps, and added GitHub Actions for testing and delivery."
+              tech={[
+                "ASP.NET Core", "React", "Azure AI Vision", "Azure OpenAI", "PostgreSQL",
+                "Docker", "Bicep", "GitHub Actions", "Azure Container Apps", "Azure Static Web Apps"
+              ]}
               github={LINKS.projects.note2QuizAiGithub}
+              live={LINKS.projects.note2QuizAiLive}
             />
             <ProjectCard
               name="Recipe Search API"
